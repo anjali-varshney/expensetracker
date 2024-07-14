@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
-  const host = "http://localhost:5000";
+  const host = "https://expensetracker-backend-phi.vercel.app";
 
   const name = useRef();
   const email = useRef();

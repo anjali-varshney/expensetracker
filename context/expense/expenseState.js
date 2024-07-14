@@ -3,7 +3,7 @@ import ExpenseContext from "./expenseContext";
 import moment from "moment";
 
 const ExpenseState = (props) => {
-  const host = "http://localhost:5000";
+  const host = "https://expensetracker-backend-phi.vercel.app";
 
   const [expenses, setExpenses] = useState([]);
   const [totalExpenses, setTotalExpenses] = useState(0);
