@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --toastify-color-info: #fff  !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  margin: 0 0.4rem;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.section {
+  padding: 8rem 0 4rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+.button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 550;
+  font-size: 1rem;
+}
+
+.button_flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(0.1rem);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+select {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  appearance: none; /* remove default arrow icon */
+  -webkit-appearance: none; /* fix for Safari */
+  -moz-appearance: none; /* fix for Firefox */
+  cursor: pointer;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+option {
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+option:hover, option:checked, option:focus{
+  background-color: black;
+  color: white;
+}
+
+.react-datepicker__close-icon::after{
+  background-color: rgb(128, 128, 128, 0.6) !important;
+  color: black !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  padding: 0.1rem 0.05rem 0.05rem 0.1rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+@media screen and (max-width:420px){
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .container {
+    margin: 0 3rem;
+  }
+}

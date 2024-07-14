@@ -1,0 +1,149 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.website {
+  margin: 0 1rem;
+}
+
+.button {
+  margin: 0 0.2rem;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.mode_toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked+.slider {
+  background-color: #333;
+}
+
+input[type="checkbox"]:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #bbb;
+}
+
+@media screen and (max-width:420px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .footer {
+    flex-direction: column;
+  }
+
+  .copyright {
+    margin-top: 1rem;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .username {
+    margin-right: 0.5rem;
+  }
+
+  .button{
+    padding: 0.5rem 0.75rem;
+
+  }
+}

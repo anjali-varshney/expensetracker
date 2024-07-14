@@ -1,0 +1,235 @@
+.card_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.expense_button{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section_title{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: 2px solid gray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    height: 200px;
+}
+
+.card_title {
+    font-size: 1.2rem;
+    border-bottom: 2px solid gray;
+    padding: 0.2rem 0;
+    font-weight: 600;
+}
+
+.card_description{
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+}
+
+.plus{
+    font-weight: 100;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted black;
+    border-radius: 0.5rem;
+    /* padding-bottom:1rem; */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 1;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.modal_content {
+    width: 500px;
+    position: relative;
+    background-color: white;
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.modal_close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    /* color: var(--title-color); */
+    color: black;
+    cursor: pointer;
+}
+
+.modal_title,
+.modal_description {
+    text-align: center;
+}
+
+.modal_title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.modal_description {
+    font-size: 0.9rem;
+    padding: 0 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.modal_services {
+    row-gap: 0.75rem;
+}
+
+.modal_service {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.modal_icon {
+    /* color: var(--title-color); */
+    color: bla;
+    font-size: 1.1rem;
+}
+
+.modal_info {
+    font-size: 0.9rem;
+}
+
+/* Active Modal */
+
+.active_modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.contact_form{
+    width: 400px;
+}
+
+.contact_form_div{
+    position: relative;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.contact_form_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    /* background: none; */
+    color: var(--text-color);
+    outline: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.contact_form_tag{
+    position: absolute;
+    top: -0.75rem;
+    left: 1.25rem;
+    font-size: var(--smaller-font-size);
+    padding: 0.25rem;
+    background-color: white;
+    z-index: 10;
+    font-weight: 500;
+}
+
+.contact_form_area{
+    height: 11rem;
+}
+
+.contact_form_area textarea{
+    resize: none;
+}
+
+.contact_form_area textarea::-webkit-scrollbar {
+    width: 10px;
+}
+   
+.contact_form_area textarea::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #2f2f2f;
+}
+
+.contact_form_area textarea::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #f1f1f1;
+}
+
+.home_scroll {
+    position: fixed;
+    right: 2.5rem;
+    bottom: -20%;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    z-index: 10;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.home_scroll_icon {
+    color: white;
+    font-size: 1rem;
+}
+
+.home_scroll_show {
+    bottom: 3rem;
+}
+
+@media screen and (max-width :420px) {
+    .card_container{
+        grid-template-columns: 1fr;
+    }
+
+    .modal_content{
+        width: 100%;
+        padding: 3.5rem 2rem 2.5rem;
+    }
+
+    .contact_form{
+        width: 100%;
+    }
+
+    .home_scroll {
+        right: 1rem;
+        bottom: 2rem;
+    }
+
+    .home_scroll_icon {
+        font-size: 0.8rem;
+    }
+}
+
